@@ -1,0 +1,8 @@
+# node modules
+server/node_modules
+
+# lock file
+server/package-lock.json
+
+# vs code settings
+.vscode

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "CircularStd-Black";
+  src: url("../font/circular-std/CircularStd-Black.otf");
+}
+
+@font-face {
+  font-family: "CircularStd-Book";
+  src: url("../font/circular-std/CircularStd-Book.otf");
+}
+
+#post:hover {
+  background: #cecece20;
+  cursor: pointer;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body div .container {
+    width: 70%;
+  }
+}

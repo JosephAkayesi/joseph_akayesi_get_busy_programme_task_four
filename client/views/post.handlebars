@@ -1,0 +1,75 @@
+<div class='container px-md-5 pb-5'>
+    <div class="card">
+        <div class='card-header align-left'>
+            <h4 class='my-auto py-1' style='font-family: CircularStd-Black;'>
+                <a class="mr-2" href="#" onclick="goBack()" style="text-decoration:none">
+                    <i data-feather="arrow-left" class="align-middle"></i>
+                    <label for="staticEmail" class="col-form-label"></label>
+                </a>
+                Post
+            </h4>
+        </div>
+        <div class="">
+            <div class='details'>
+                <ul class="list-group list-group-flush">
+                    {{#if postData}}
+                    <li class="list-group-item">
+                        <div class="row title">
+                            <div class="col">
+                                <h5 style='font-family: CircularStd-Book; font-weight: 600;'>{{postData.title}}</h5>
+                            </div>
+                        </div>
+                        <div class="row body">
+                            <div class="col">
+                                <p style='font-family: CircularStd-Book;'>{{postData.body}}</p>
+                            </div>
+                        </div>
+                        <div class="row userId">
+                            <div class="col-8">
+                                <small class="form-text text-info"
+                                    style='font-family: CircularStd-Book; font-weight: 500'>userId:
+                                    {{postData.userId}}</small>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="badge badge-pill badge-secondary" id="postId"
+                                    style='font-family: CircularStd-Book; opacity: 0.4;'>{{postData.id}}</span>
+                            </div>
+                        </div>
+                    </li>
+                    {{/if}}
+                </ul>
+                <ul class="list-group list-group-flush">
+                    {{> _addComment}}
+                </ul>
+                <ul class="list-group list-group-flush px-3" id="showComments">
+                    {{!-- <li class="list-group-item">
+                        <div class="row pb-4">
+                            <div class="col-8 align-middle" style='font-family: CircularStd-Book; font-weight: 600;'>
+                                Username</div>
+                            <div class="col-4 text-right">
+                                <a class="px-2" href={{next}} data-method="post" style="text-decoration:none">
+                                    <i class="" data-feather="trash-2"
+                                        style="width: 15px; height: 15px; color: red;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row comment">
+                            <div class="col">
+                                <p style='font-family: CircularStd-Book;'>Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Laborum enim exercitationem ea illo omnis quaerat sapiente nemo,
+                                    aspernatur dignissimos, harum magnam maxime cupiditate incidunt ipsa.
+                                </p>
+                            </div>
+                        </div>
+                    </li> --}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <script>
+        feather.replace()
+    </script>

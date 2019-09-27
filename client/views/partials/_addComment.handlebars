@@ -1,0 +1,35 @@
+<li class="list-group-item" style="background-color: #007bff05">
+    <div class="row">
+        <div class="col comments">
+            <a class="px-2" href="#comment" data-toggle="modal" data-target="#addCommentModal" style="text-decoration:none">
+                <i data-feather="message-circle"></i>
+                {{!-- <label for="staticEmail" class="col-form-label align-middle">20</label> --}}
+            </a>
+        </div>
+        <div class="col text-right my-auto">
+            {{> _commentTotal}}
+        </div>
+    </div>
+</li>
+
+<!-- Modal -->
+<div class="modal fade" id="addCommentModal" tabindex="-1" role="dialog" aria-labelledby="#addCommentModal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border-radius: .5rem;">
+            <div class="modal-header">
+                <h5 class="modal-title my-auto py-1 align-left" style='font-family: CircularStd-Black;'>Add Comment</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i data-feather="x" class="align-middle" data-dismiss="modal" aria-label="Close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <textarea class="form-control" id="postComment" rows="3" spellcheck="false"
+                    placeholder="Type your comment" style="border: none; box-shadow: none;"></textarea>
+            </div>
+            <div class="modal-footer pt-2" style="border-top: none">
+                <button type="button" class="btn btn-primary btn-sm" style="border-radius: 30px;" onclick="saveComment()">Respond</button>
+            </div>
+        </div>
+    </div>
+</div>

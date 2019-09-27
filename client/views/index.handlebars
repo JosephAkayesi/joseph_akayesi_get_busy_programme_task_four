@@ -1,0 +1,56 @@
+<div class='container px-md-5 pb-5'>
+    <div class="card">
+        <div class='card-header align-left'>
+            <h4 class='my-auto py-1' style='font-family: CircularStd-Black;'>Posts</h4>
+        </div>
+        <div class="">
+            <div class='details'>
+                <ul class="list-group list-group-flush">
+                    {{#each postsData}}
+                    <li class="list-group-item" id="post" onclick="fetchPost({{id}})" data-method="post">
+                        <div class="row userId">
+                            <div class="col-8">
+                                <small class="form-text text-info text-muted"
+                                    style='font-family: CircularStd-Book; font-weight: 500; opacity: 0.4;'>userId:
+                                    {{userId}}</small>
+                            </div>
+                        </div>
+                        <div class="row title">
+                            <div class="col">
+                                <h5 style='font-family: CircularStd-Book; font-weight: 600;'>{{title}}</h5>
+                            </div>
+                        </div>
+                        <div class="row body">
+                            <div class="col">
+                                <p style='font-family: CircularStd-Book;'>{{body}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 comment">
+                                <a class="px-2" href={{next}} data-method="post" style="text-decoration:none">
+                                    <i data-feather="message-circle"></i>
+                                    {{!-- <label>20</label> --}}
+                                    <label for="staticEmail" class="col-form-label align-middle postTotalComments" class='' id='total_{{id}}'></label>
+                                </a>
+                                {{!-- <small class="form-text text-info"
+                                    style='font-family: CircularStd-Book; font-weight: 500'>userId:
+                                    {{userId}}</small> --}}
+                            </div>
+                            <div class="col-4 text-right postId">
+                                <span class="badge badge-pill badge-secondary"
+                                    style='font-family: CircularStd-Book; opacity: 0.4;'>{{id}}</span>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="text-center py-4">
+            {{> _previous}}
+            {{> _next}}
+        </div>
+    </div>
+</div>
+{{!-- <link rel="stylesheet" href="/css/main.css"> --}}
